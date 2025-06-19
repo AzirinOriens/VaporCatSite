@@ -1,0 +1,35 @@
+/* Set full-page background */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('images/WWMarketingHeroShot.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+/* Dim overlay for better readability */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Header styling */
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+}
+
+/* Optional subheader/tagline */
+.tagline {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+}
