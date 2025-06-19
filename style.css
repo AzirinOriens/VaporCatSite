@@ -2,15 +2,30 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('images/WWMarketingHeroShot.png') no-repeat center center fixed;
-  background-size: cover;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
+  background-color: black;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Dim overlay for better readability */
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background: url('images/WebsiteBackground.jpg') center center;
+  background-size: 70%;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -22,9 +37,16 @@ body {
 
 /* Header styling */
 h1 {
-  font-size: 4rem;
+  font-size: 10rem;
   margin: 0;
-  text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+  text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px rgb(132, 0, 255);
+}
+
+/* Header styling */
+h2 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px rgb(132, 0, 255);
 }
 
 /* Optional subheader/tagline */
@@ -32,4 +54,50 @@ h1 {
   font-size: 1.5rem;
   margin-top: 0.5rem;
   color: #ccc;
+}
+
+.text-image .content-wrapper {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.text-image.text-image--reverse .content-wrapper{
+  flex-flow: row-reverse;
+}
+
+@media (max-width: 560px) {
+  .text-image .content-wrapper,
+  .text-image.text-image--reverse .content-wrapper {
+    flex-flow: column;
+  }
+}
+
+.text-image__image,
+.text-image__copy {
+  width: calc(50% - 1.5rem);
+}
+
+@media (max-width: 560px) {
+  .text-image__image,
+  .text-image__copy {
+    width: 100%;
+  }
+}
+
+.text-image + .text-image {
+  padding-top: 0;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: #520093;
+  color: #fff;
+  text-decoration: unset;
+}
+
+.button:hover,
+.button:focus {
+  background: rgb(70, 0, 102);
 }
