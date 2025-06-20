@@ -1,3 +1,6 @@
+*,
+body *{box-sizing: border-box;}
+
 /* Set full-page background */
 body {
   margin: 0;
@@ -11,10 +14,15 @@ p {
   font-size: 1.5rem;
   margin-top: 0.5rem;
   color: #ccc;
+  text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px rgb(132, 0, 255);
 }
 
 section {
   padding: 4rem 2rem;
+}
+
+@media (max-width: 560px){
+  section{padding: 2rem 1rem;}
 }
 
 .content-wrapper {
@@ -22,10 +30,24 @@ section {
   margin: 0 auto;
 }
 
+@media (max-width: 560px){
+  .content-wrapper{max-width: 100%;}
+}
+
+.content-wrapper.content-wrapper--narrow {
+  max-width: 960px;
+}
+
+.centered-copy {
+  text-align: center;
+}
+
 /* Dim overlay for better readability */
 .overlay {
-  background: url('images/WebsiteBackground.jpg') center center;
-  background-size: 70%;
+  background: url('images/WebsiteBackgroundmk2.jpg') center 0px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -37,13 +59,19 @@ section {
 
 /* Header styling */
 h1 {
-  font-size: 10rem;
+  font-size: 120px;
   margin: 0;
   text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px rgb(132, 0, 255);
 }
 
 /* Header styling */
 h2 {
+  font-size: 5rem;
+  margin: 0;
+  text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px rgb(132, 0, 255);
+}
+
+h3 {
   font-size: 3rem;
   margin: 0;
   text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px rgb(132, 0, 255);
@@ -54,6 +82,7 @@ h2 {
   font-size: 1.5rem;
   margin-top: 0.5rem;
   color: #ccc;
+  text-shadow: 0 0 20px rgb(132, 0, 255), 0 0 40px rgb(132, 0, 255);
 }
 
 .text-image .content-wrapper {
@@ -100,4 +129,10 @@ h2 {
 .button:hover,
 .button:focus {
   background: rgb(70, 0, 102);
+}
+
+.text-image__side-image .content-wrapper{
+  display: flex;
+  gap: 3rem;
+  align-items: center;
 }
